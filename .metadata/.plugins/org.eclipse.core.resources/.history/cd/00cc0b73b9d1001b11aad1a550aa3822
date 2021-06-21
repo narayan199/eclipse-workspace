@@ -1,0 +1,18 @@
+package com.sring.jdbc.dao;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import org.springframework.jdbc.core.RowMapper;
+
+import com.sring.jdbc.entities.Student;
+
+public class RowMapperImp  implements RowMapper<Student>{
+
+	public Student mapRow(ResultSet rs, int rowNum) throws SQLException {
+		Student student= new Student();
+		student.getId(rs.getInt(1));
+		return null;
+	}
+
+}

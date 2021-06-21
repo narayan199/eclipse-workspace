@@ -1,0 +1,21 @@
+package com.sring.jdbc;
+
+import javax.sql.DataSource;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
+
+@Configuration
+public class JdbcConfig {
+@Bean("ds")
+public DataSource getDataSource()
+{
+	DriverManagerDataSource ds = new DriverManagerDataSource();
+	ds.setDriverClassName("com.mysql.cj.jdbc.Driver");
+	ds.setUrl("jdbc:mysql://Localhost:3306/jdbc");
+	ds.setUsername("root");
+	ds.setPassword(null);
+	return ds;
+}
+}

@@ -1,0 +1,26 @@
+package com.sring.jdbc.dao;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import com.sring.jdbc.entities.Student;
+
+public class StudentDaoImp implements SutdentDao {
+	private JdbcTemplate jdbcTemplate;
+
+	public int insert(Student student) {
+		  //sql
+        String query="insert into sutdent(id,name,city) values(?,?,?)";
+        //fire query
+        int result = jdbcTemplate.update(query,1,"narayan","pokahra");
+        System.out.println(result);
+	}
+
+	public JdbcTemplate getJdbcTemplate() {
+		return jdbcTemplate;
+	}
+
+	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
+		this.jdbcTemplate = jdbcTemplate;
+	}
+
+}

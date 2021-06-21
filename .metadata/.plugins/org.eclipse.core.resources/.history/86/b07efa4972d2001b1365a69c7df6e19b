@@ -1,0 +1,5 @@
+package com.sring.jdbc;
+
+public class JdbcConfig {
+
+}
