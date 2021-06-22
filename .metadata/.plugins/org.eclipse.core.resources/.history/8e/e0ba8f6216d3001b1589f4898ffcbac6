@@ -1,0 +1,7 @@
+package swingJdbc;
+
+import javax.swing.JFrame;
+
+public class DeleteUser extends JFrame {
+
+}

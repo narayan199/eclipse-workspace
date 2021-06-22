@@ -26,18 +26,20 @@ public class App
         //s2.setCity("birsiya");
         //s2.setId(2);
         //studentDaoImp.change(s2);
-       //  List<Student> student = studentDaoImp.getAllStudent() ;    //  System.out.println(student);
-        //student.toString();
-        //for(Student s:student)
-       // {
-       // 	System.out.println(s);
-       // }
         ApplicationContext context = new AnnotationConfigApplicationContext(JdbcConfig.class);
         StudentDaoImp studentDaoImp = context.getBean("studentDaoImp",StudentDaoImp.class);
+         List<Student> student = studentDaoImp.getAllStudent() ;    //  System.out.println(student);
+        student.toString();
+        for(Student s:student)
+        {
+       	System.out.println(s);
+      }
+       
         Student s1 = new Student();
         s1.setId(4);
         s1.setName("me");
        s1.setCity("pata");
-       studentDaoImp.insert(s1);
+    //   studentDaoImp.insert(s1);
+     
 }
 }

@@ -1,0 +1,17 @@
+package swingJdbc;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class DeleteUser extends JFrame {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3105459112998680273L;
+	DeleteUser()
+	{
+		this.setVisible(true);
+		this.setSize(500, 500);
+	}
+}

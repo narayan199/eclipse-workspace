@@ -34,9 +34,9 @@ public class UserRegsiter extends JFrame implements ActionListener {
      */
     public static void main(String[] args) {
 
-                	UserRegsiter frame = new UserRegsiter();
-                    frame.setVisible(true);
-               
+                	//UserRegsiter frame = new UserRegsiter();
+                    //frame.setVisible(true);
+               new DeleteUser();
     }
     public UserRegsiter() {
         setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\User\\Desktop\\STDM.jpg"));

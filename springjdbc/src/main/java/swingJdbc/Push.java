@@ -1,8 +1,13 @@
 package swingJdbc;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
+
+import com.sring.jdbc.dao.RowMapperImp;
+import com.sring.jdbc.entities.Student;
 @Component("push")
 public class Push {
 	private JdbcTemplate jdbcTemplate;
@@ -30,4 +35,10 @@ public class Push {
         System.out.println(result);
 		return result;
 	}
+	public List<User> getAllUser() {
+		String query="select * from user";
+		List<User> user = this.jdbcTemplate.query(query, new RowMap());
+		return user;
+	}
+	
 }

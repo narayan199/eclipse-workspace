@@ -1,0 +1,38 @@
+package swingJdbc;
+
+import java.util.Iterator;
+import java.util.List;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+public class DeleteUser extends JFrame {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3105459112998680273L;
+	DeleteUser()
+	{
+		this.setVisible(true);
+		this.setSize(500, 500);
+		ApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
+		Push bean = context.getBean("push",Push.class);
+		List<User> allUser = bean.getAllUser();	
+		allUser.toString();
+		Iterator<User> iterator = allUser.iterator();
+		while(iterator.hasNext())
+		{
+			User u =iterator.next();
+			JLabel l1 = new JLabel(u.getFirstname());
+			l1.setBounds(30, 40, 100, 20);
+			this.add(l1);
+			JLabel l2 = new JLabel("hello");
+			this.add(l2);
+		}
+
+	}
+}
