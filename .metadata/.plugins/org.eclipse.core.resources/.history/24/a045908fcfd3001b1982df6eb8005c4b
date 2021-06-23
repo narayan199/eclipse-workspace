@@ -28,17 +28,16 @@ public class DeleteUser extends JFrame {
 		JLabel l2 = new JLabel("hello");
 		l2.setBounds(60, 40, 100, 20);
 		this.add(l2);
-	
+		 l1 = new JLabel("hey");
+	    l2.setBounds(40, 40, 100, 20);
+		this.add(l1);
 			
 	
       
 		while(iterator.hasNext())
 		{
 		User u =iterator.next();
-		 l1 = new JLabel(u.getFirstname())
-				 
-		    l2.setBounds(40, 40, 100, 20);
-			this.add(l1);
+		
 		
 		}
 

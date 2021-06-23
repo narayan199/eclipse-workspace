@@ -35,8 +35,7 @@ public class DeleteUser extends JFrame {
 		while(iterator.hasNext())
 		{
 		User u =iterator.next();
-		 l1 = new JLabel(u.getFirstname())
-				 
+		 l1 = new JLabel(u);
 		    l2.setBounds(40, 40, 100, 20);
 			this.add(l1);
 		
